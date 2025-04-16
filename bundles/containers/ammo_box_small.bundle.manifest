@@ -1,0 +1,46 @@
+ManifestFileVersion: 0
+CRC: 2565777479
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5aee356ca91b5c33ea9f413c5d99ea6d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: bb8ff125ff02c64baade525d9a2a4bd6
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 5aee356ca91b5c33ea9f413c5d99ea6d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0e88583c408674d4bad1d52c226ee09a, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 134
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: PreviewPivot/IconSettings
+Assets:
+- Assets/Home Comforts/ItemCases/AmmoBoxes/ammo_box_small.prefab
+Dependencies:
+- P:/EscapeFromTarkov-SDK/AssetBundles/StandaloneWindows/assets/commonassets/physics/physicsmaterials.bundle
+- P:/EscapeFromTarkov-SDK/AssetBundles/StandaloneWindows/shaders

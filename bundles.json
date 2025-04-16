@@ -1,0 +1,120 @@
+{
+    "manifest": [
+        {
+            "key": "barricades/barricade_concrete_wall.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "barricades/barricade_wall_normal.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "barricades/barricade_wall_ported.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "barricades/barricade_wall_slant_left.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "barricades/barricade_wall_slant_right.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "barricades/metal_sheet_window_barricade.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "barricades/wooden_planks_window_barricade.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "barricades/sandbag_short.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "barricades/sandbag_long.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "barricades/sandbag_curved.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "buildingpieces/log_stairs_long.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "buildingpieces/log_stairs_medium.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "buildingpieces/log_stairs_short.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "containers/ammo_box_large.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "containers/ammo_box_medium.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "containers/ammo_box_small.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "containers/fancy_weapon_case.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "containers/large_supply_case.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/storage_rack_1.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/storage_rack_2.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/storage_rack_3.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/storage_rack_4.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/storage_rack_5.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/bed.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/fridge.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/military_gun_rack.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/fancy_gun_rack.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/reloading_bench.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        },
+        {
+            "key": "furniture/work_bench.bundle",
+            "dependencyKeys": ["assets/commonassets/physics/physicsmaterials.bundle", "cubemaps", "shaders"]
+        }
+    ]
+}

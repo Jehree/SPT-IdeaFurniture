@@ -1,0 +1,83 @@
+{
+    "_id": "678fab45ec8b6e5add71985a",
+    "working": true,
+    "availableInRaid": false,
+    "items_buy": {
+        "category": [
+            "57864ada245977548638de91",
+            "57864e4c24597754843f8723",
+            "57864c322459775490116fbf",
+            "590c745b86f7743cc433c5f2",
+            "57864bb7245977548b3b66c2",
+            "543be5664bdc2dd4348b4569"
+        ],
+        "id_list": []
+    },
+    "items_buy_prohibited": {},
+    "customization_seller": false,
+    "name": "Idea Furniture",
+    "surname": "",
+    "nickname": "Idea",
+    "location": "Interchange",
+    "avatar": "/files/trader/avatar/Mikhail_Reznichenko.jpg",
+    "balance_rub": 5000000,
+    "balance_dol": 0,
+    "balance_eur": 0,
+    "unlockedByDefault": true,
+    "discount": 0,
+    "discount_end": 0,
+    "buyer_up": true,
+    "currency": "RUB",
+    "nextResupply": 1615141448,
+    "repair": {
+        "availability": false,
+        "quality": "2",
+        "excluded_id_list": [],
+        "excluded_category": [],
+        "currency": "5449016a4bdc2d6f028b456f",
+        "currency_coefficient": 1,
+        "price_rate": 10
+    },
+    "insurance": {
+        "availability": false,
+        "min_payment": 0,
+        "min_return_hour": 0,
+        "max_return_hour": 0,
+        "max_storage_time": 99,
+        "excluded_category": []
+    },
+    "gridHeight": 150,
+    "loyaltyLevels": [
+        {
+            "minLevel": 1,
+            "minSalesSum": 0,
+            "minStanding": 0.0,
+            "buy_price_coef": 50,
+            "repair_price_coef": 180,
+            "insurance_price_coef": 10,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0
+        },
+        {
+            "minLevel": 10,
+            "minSalesSum": 0,
+            "minStanding": 0.0,
+            "buy_price_coef": 50,
+            "repair_price_coef": 180,
+            "insurance_price_coef": 10,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0
+        },
+        {
+            "minLevel": 25,
+            "minSalesSum": 0,
+            "minStanding": 0.0,
+            "buy_price_coef": 50,
+            "repair_price_coef": 180,
+            "insurance_price_coef": 10,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0
+        }
+    ],
+    "sell_category": []
+}

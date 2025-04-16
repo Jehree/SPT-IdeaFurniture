@@ -1,0 +1,48 @@
+ManifestFileVersion: 0
+CRC: 3887744869
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2dab8cb6cdd81e12fbb6d0dfab1abe4f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6b3a8643855d83b503396ce6cfdb64eb
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 2dab8cb6cdd81e12fbb6d0dfab1abe4f
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0e88583c408674d4bad1d52c226ee09a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6661b2634ada1ba45b7c832f980e4635, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 134
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: PreviewPivot/IconSettings
+Assets:
+- Assets/Home Comforts/Stairs/Medium/Log_Stairs_Medium.prefab
+Dependencies:
+- P:/EscapeFromTarkov-SDK/AssetBundles/StandaloneWindows/assets/commonassets/physics/physicsmaterials.bundle
+- P:/EscapeFromTarkov-SDK/AssetBundles/StandaloneWindows/shaders

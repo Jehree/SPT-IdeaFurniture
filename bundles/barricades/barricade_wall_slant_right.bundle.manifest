@@ -1,0 +1,45 @@
+ManifestFileVersion: 0
+CRC: 3095211544
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 04f336bfc262725e090056883ede0a89
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cc25d1e5f7c7c4cd41bfe4eefa0a5313
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 04f336bfc262725e090056883ede0a89
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0e88583c408674d4bad1d52c226ee09a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6661b2634ada1ba45b7c832f980e4635, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: PreviewPivot/IconSettings
+Assets:
+- Assets/Home Comforts/WallBarricades/Vol3/barricade_wall_slant_right_LITPhysicalLITRemoveRootCollider.prefab
+Dependencies:
+- P:/EscapeFromTarkov-SDK/AssetBundles/StandaloneWindows/shaders
