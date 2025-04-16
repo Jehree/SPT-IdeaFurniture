@@ -30,10 +30,9 @@ class Mod implements IPreSptLoadMod, IPostDBLoadMod {
         const ragfairConfig = this.Helper.configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
 
         this.TraderHelper = new TraderHelper();
-        this.TraderHelper.registerProfileImage(traderJson, ModHelper.modName, preSptModLoader, this.Helper.imageRouter, "ideafurniture.png");
+        //this.TraderHelper.registerProfileImage(traderJson, ModHelper.modName, preSptModLoader, this.Helper.imageRouter, "ideafurniture.png");
+        this.Helper.imageRouter.addRoute(traderJson.avatar.replace(".png", ""), "user/mods/IdeaFurniture/res/ideafurniture.png");
         this.TraderHelper.setTraderUpdateTime(traderConfig, traderJson, 3600, 4000);
-
-        Traders[traderJson._id] = traderJson._id;
 
         ragfairConfig.traders[traderJson._id] = false;
     }
@@ -41,7 +40,8 @@ class Mod implements IPreSptLoadMod, IPostDBLoadMod {
     public postDBLoad(container: DependencyContainer): void {
         this.Helper.init(container, InitStage.POST_DB_LOAD);
 
-        this.TraderHelper.addTraderToDb(traderJson, this.Helper.dbTables, this.Helper.jsonUtil, assortJson);
+        this.TraderHelper.addTraderToDb(traderJson, this.Helper.dbTables, this.Helper.jsonUtil);
+        this.Helper.dbTraders[traderJson._id].assort.loyal_level_items = {};
         this.TraderHelper.addTraderToLocales(
             traderJson,
             this.Helper.dbTables,
@@ -170,14 +170,14 @@ class Mod implements IPreSptLoadMod, IPostDBLoadMod {
             upd: {
                 UnlimitedCount: true,
                 StackObjectsCount: 999999,
-                BuyRestrictionMax: 10,
+                BuyRestrictionMax: 999999,
                 BuyRestrictionCurrent: 0,
             },
         };
 
         trader.assort.items.push(item);
         trader.assort.barter_scheme[itemTemplate.assortId] = [[barter]];
-        //trader.assort.loyal_level_items[itemTemplate.assortId] = itemTemplate.loyaltyLevel;
+        trader.assort.loyal_level_items[itemTemplate.assortId] = itemTemplate.loyaltyLevel;
     }
 }
 

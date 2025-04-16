@@ -18,5 +18,6 @@
 /package-lock.json
 /tsconfig.json
 /types
-Tyr-MikhailReznichenko-Server.code-workspace
+/UnityAssets
+IdeaFurniture.code-workspace
 .gitattributes

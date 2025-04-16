@@ -5,10 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.mod = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
-const Traders_1 = require("C:/snapshot/project/obj/models/enums/Traders");
 const trader_helper_1 = require("../src/trader_helper");
 const traderJson = require("../db/trader.json");
-const assortJson = require("../db/assort.json");
 const mod_helper_1 = require("../src/mod_helper");
 const items_json_1 = __importDefault(require("../db/items.json"));
 const customItems = items_json_1.default;
@@ -22,14 +20,15 @@ class Mod {
         const traderConfig = this.Helper.configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const ragfairConfig = this.Helper.configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         this.TraderHelper = new trader_helper_1.TraderHelper();
-        this.TraderHelper.registerProfileImage(traderJson, mod_helper_1.ModHelper.modName, preSptModLoader, this.Helper.imageRouter, "ideafurniture.png");
+        //this.TraderHelper.registerProfileImage(traderJson, ModHelper.modName, preSptModLoader, this.Helper.imageRouter, "ideafurniture.png");
+        this.Helper.imageRouter.addRoute(traderJson.avatar.replace(".png", ""), "user/mods/IdeaFurniture/res/ideafurniture.png");
         this.TraderHelper.setTraderUpdateTime(traderConfig, traderJson, 3600, 4000);
-        Traders_1.Traders[traderJson._id] = traderJson._id;
         ragfairConfig.traders[traderJson._id] = false;
     }
     postDBLoad(container) {
         this.Helper.init(container, mod_helper_1.InitStage.POST_DB_LOAD);
-        this.TraderHelper.addTraderToDb(traderJson, this.Helper.dbTables, this.Helper.jsonUtil, assortJson);
+        this.TraderHelper.addTraderToDb(traderJson, this.Helper.dbTables, this.Helper.jsonUtil);
+        this.Helper.dbTraders[traderJson._id].assort.loyal_level_items = {};
         this.TraderHelper.addTraderToLocales(traderJson, this.Helper.dbTables, traderJson.name, traderJson.nickname, traderJson.nickname, traderJson.location, "Your favorite local furniture store.");
         for (const item of customItems) {
             itemData.push(item.id);
@@ -122,13 +121,13 @@ class Mod {
             upd: {
                 UnlimitedCount: true,
                 StackObjectsCount: 999999,
-                BuyRestrictionMax: 10,
+                BuyRestrictionMax: 999999,
                 BuyRestrictionCurrent: 0,
             },
         };
         trader.assort.items.push(item);
         trader.assort.barter_scheme[itemTemplate.assortId] = [[barter]];
-        //trader.assort.loyal_level_items[itemTemplate.assortId] = itemTemplate.loyaltyLevel;
+        trader.assort.loyal_level_items[itemTemplate.assortId] = itemTemplate.loyaltyLevel;
     }
 }
 exports.mod = new Mod();

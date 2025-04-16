@@ -1,40 +1,6 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || (function () {
-    var ownKeys = function(o) {
-        ownKeys = Object.getOwnPropertyNames || function (o) {
-            var ar = [];
-            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
-            return ar;
-        };
-        return ownKeys(o);
-    };
-    return function (mod) {
-        if (mod && mod.__esModule) return mod;
-        var result = {};
-        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
-        __setModuleDefault(result, mod);
-        return result;
-    };
-})();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TraderHelper = void 0;
-const questAssort = __importStar(require("../db/questassort.json"));
 class TraderHelper {
     /**
      * Add profile picture to our trader
@@ -74,13 +40,31 @@ class TraderHelper {
      * @param tables database
      * @param jsonUtil json utility class
      */
-    addTraderToDb(traderDetailsToAdd, tables, jsonUtil, assortJson) {
+    addTraderToDb(traderDetailsToAdd, tables, jsonUtil) {
         // Add trader to trader table, key is the traders id
         tables.traders[traderDetailsToAdd._id] = {
-            assort: jsonUtil.deserialize(jsonUtil.serialize(assortJson)), // Deserialise/serialise creates a copy of the json and allows us to cast it as an ITraderAssort
+            assort: this.createAssortTable(), // assorts are the 'offers' trader sells, can be a single item (e.g. carton of milk) or multiple items as a collection (e.g. a gun)
             base: jsonUtil.deserialize(jsonUtil.serialize(traderDetailsToAdd)), // Deserialise/serialise creates a copy of the json and allows us to cast it as an ITraderBase
-            questassort: jsonUtil.deserialize(jsonUtil.serialize(questAssort)), // questassort is empty as trader has no assorts unlocked by quests
+            questassort: {
+                started: {},
+                success: {},
+                fail: {},
+            }, // questassort is empty as trader has no assorts unlocked by quests
         };
+    }
+    /**
+     * Create basic data for trader + add empty assorts table for trader
+     * @returns ITraderAssort
+     */
+    createAssortTable() {
+        // Create a blank assort object, ready to have items added
+        const assortTable = {
+            nextResupply: 0,
+            items: [],
+            barter_scheme: {},
+            loyal_level_items: {},
+        };
+        return assortTable;
     }
     /**
      * Add traders name/location/description to the locale table
