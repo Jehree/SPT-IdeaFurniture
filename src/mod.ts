@@ -35,6 +35,7 @@ class Mod implements IPreSptLoadMod, IPostDBLoadMod {
         this.TraderHelper.setTraderUpdateTime(traderConfig, traderJson, 3600, 4000);
 
         ragfairConfig.traders[traderJson._id] = false;
+        Traders[traderJson._id] = traderJson._id;
     }
 
     public postDBLoad(container: DependencyContainer): void {

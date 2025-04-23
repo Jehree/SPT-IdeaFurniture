@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.mod = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
+const Traders_1 = require("C:/snapshot/project/obj/models/enums/Traders");
 const trader_helper_1 = require("../src/trader_helper");
 const traderJson = require("../db/trader.json");
 const mod_helper_1 = require("../src/mod_helper");
@@ -24,6 +25,7 @@ class Mod {
         this.Helper.imageRouter.addRoute(traderJson.avatar.replace(".png", ""), "user/mods/IdeaFurniture/res/ideafurniture.png");
         this.TraderHelper.setTraderUpdateTime(traderConfig, traderJson, 3600, 4000);
         ragfairConfig.traders[traderJson._id] = false;
+        Traders_1.Traders[traderJson._id] = traderJson._id;
     }
     postDBLoad(container) {
         this.Helper.init(container, mod_helper_1.InitStage.POST_DB_LOAD);
